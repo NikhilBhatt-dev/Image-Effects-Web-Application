@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+       
+      #box{
+        height:520px;
+        width:680px;
+        margin:80px auto;
+        border:4px blue solid;
+      }
+
+      img{
+        padding:10px;
+      }
+      #bright
+      {
+        height: 70px;
+        width:180px;
+        border:1px solid black;
+        margin:06px auto;
+        margin-left:10px;
+        font-size:19px;
+        box-sizing: border-box;
+        display:inline-block;
+  
+
+      }
+
+      #range{
+      position:absolute;
+      margin-left:20px;
+      }
+
+      p{
+        text-align:center;
+        margin:0;
+        margin-top:16px;
+      }
+
+      #cont
+      {
+        height: 70px;
+        width:180px;
+        border:1px solid black;
+        margin:-77px auto;
+        margin-left: 251px;
+        font-size:19px;
+      }
+
+      #Contract{
+      position:absolute;
+      margin-left:20px;
+      }
+
+      
+      body{
+            margin:0;
+            padding:0;
+        }
+
+        #sat
+      {
+        height: 70px;
+        width:180px;
+        border:1px solid black;
+        margin:5px auto;
+        margin-left: 490px;
+        font-size:19px;
+      }
+
+      #saturate{
+      position:absolute;
+      margin-left:20px;
+      }
+
+
+
+
+
+
+
+    </style>
+</head>
+<body>
+<div id="box">
+    <img src="image.jpg" width="660px" height="400px" id="pic">
+
+
+<div id="bright">
+    <p>Brightness</p>
+    <input type="range" id="range" min="0" max="200" oninput="bright()">
+</div>
+
+
+<div id="cont">
+   <p>Contrast</p>
+    <input type="range" id="contrast" min="0" max="500" oninput="contrast()">
+</div>
+
+
+
+<div id="sat">
+    <p>Saturate</p>
+     <input type="range" id="saturate" min="0" max="500" oninput="saturate()">
+ </div>
+ 
+ 
+
+
+</div>
+
+<script>
+    function bright()
+    {
+        var x = document.getElementById("range").value;
+        var pic = document.getElementById("pic");
+        pic.style.filter = "brightness("+x+"%)";
+    }
+    function contrast(){
+        var x = document.getElementById("contrast").value;
+        var pic = document.getElementById("pic");
+        pic.style.filter = "contrast("+x+"%)";
+    }
+    function saturate(){
+        var x = document.getElementById("saturate").value;
+        var pic = document.getElementById("pic");
+        pic.style.filter = "saturate("+x+"%)";
+    } 
+
+</script>
+</body>
+</html>
